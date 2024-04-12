@@ -39,9 +39,10 @@ namespace Assesments
 
         public static void checkGreatestNumber(int num1, int num2, int num3)
         {
-         //   int max = (num1 > num2 && num1 > num3) ? num1 : ((num2 > num3) ? num2 : num3);
+            int max = (num1 > num2 && num1 > num3) ? num1 : ((num2 > num3) ? num2 : num3);
 
-          //  Console.WriteLine(max +" is Greater");
+            Console.WriteLine("Using && --->>");
+            Console.WriteLine(max +" is Greater");
 
             string res = num1 > num2 ? (num1 > num3 ? $"{num1} is greatest" : $"{num3} is greatest") : num2 > num3 ? $"{num2} is greatest" : $"{num3} is greatest";
             Console.WriteLine(res);

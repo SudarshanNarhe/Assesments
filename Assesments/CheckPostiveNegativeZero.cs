@@ -15,8 +15,7 @@ namespace Assesments
             int number = Convert.ToInt32(Console.ReadLine());
 
             String result = (number > 0) ? "Postive" : (number < 0) ? "Negative" : "Zero";
-            Console.WriteLine(number + " is "+result);
-
+            Console.WriteLine(number + " is "+ result);
 
         }
     }
