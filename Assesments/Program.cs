@@ -36,8 +36,6 @@ Console.WriteLine(emp2.Display());
 
 //Student class with Constructor
 
-
-
 /*Student std = new Student();
 Console.WriteLine(std.Display());
 
@@ -161,6 +159,7 @@ Console.WriteLine(r.Display());
 
 //Method overloading 
 
+/*
 Calculation cal = new Calculation();
 
 double res= cal.Addition(12, 34);
@@ -171,4 +170,332 @@ Console.WriteLine("Addition is : " + res1);
 
 double res2 = cal.Addition(24, 76.30);
 Console.WriteLine("Addition is : " + res2);
+
+*/
+
+// Assignments on overloading
+
+/*
+CalculateAreas ca = new CalculateAreas();
+
+Console.WriteLine("Enter a Proper choice for calculate a area : \n1.Rectangle\n2.Circle\n3.Square\n4.Triangle");
+int choice = Convert.ToInt32(Console.ReadLine());
+switch (choice)
+{
+    case 1:
+        Console.WriteLine("Enter a length of rectangle : ");
+        double length = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Enter a width of rectangle : ");
+        double width = Convert.ToDouble(Console.ReadLine());
+        double area = ca.CalculateArea(length, width);
+        Console.WriteLine("Area of a rectangle is : "+area);
+        break;
+    case 2:
+        Console.WriteLine("Enter a radius of a circle : ");
+        int radius = Convert.ToInt32(Console.ReadLine());
+        double area1 = ca.CalculateArea(radius);
+        Console.WriteLine("Area of a circle is : " + area1);
+        break;
+    case 3:
+        Console.WriteLine("Enter a side of square : ");
+        double side = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Area of a Sqaure is : "+ca.CalculateArea(side));
+        break;
+    case 4:
+        Console.WriteLine("Enter a breadth of triangle : ");
+        double breadth = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Enter a height of trianlge : ");
+        int height = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Area of a triangle is : " + ca.CalculateArea(breadth,height));
+        break;
+    default : Console.WriteLine("Please enter a proper choice");
+        break;
+}
+
+*/
+
+/*
+Console.WriteLine("Addition is : "+ ArthmeticOperations.Addition(12.34, 32.12));
+Console.WriteLine("Addition is : " + ArthmeticOperations.Addition(53, 50));
+Console.WriteLine("Subraction is : " + ArthmeticOperations.Subtraction(87.23, 23.21));
+Console.WriteLine("Subraction is : " + ArthmeticOperations.Subtraction(872, 123));
+Console.WriteLine("Multiplication is : " + ArthmeticOperations.Multiplication(17.2, 15.8));
+Console.WriteLine("Multiplication is : " + ArthmeticOperations.Multiplication(12, 9));
+Console.WriteLine("Division is : " + ArthmeticOperations.Division(123.85, 3.5));
+Console.WriteLine("Division is : " + ArthmeticOperations.Division(64, 3));
+
+*/
+
+/*
+StaticAssignment s1 = new StaticAssignment("Sudarshan");
+StaticAssignment.University();
+Console.WriteLine(s1.Display());
+
+*/
+
+// Interface 
+
+/*
+Job j1 = new Job();
+Console.WriteLine("Tax amount for job : "+j1.PayTax());
+
+Bussiness b1 = new Bussiness();
+Console.WriteLine("Tax amount for bussiness : "+b1.PayTax());
+*/
+
+// To call explicit interface we have to call like this interface as ref and class name 
+
+/*
+ICustomer c1 = new Transaction();
+Console.WriteLine(c1.Print());
+
+IOrder o1 = new Transaction();
+Console.WriteLine(o1.Print());
+*/
+
+// Partial Class
+/*
+Calc c = new Calc();
+
+Console.WriteLine($"Addition is : {c.Add(10,12)}");
+
+c.Sub(20, 12);
+c.Multi(5, 3);
+
+*/
+
+// Array Examples
+
+/*
+//first Syntax
+int[] arr = new int[5];
+arr[0] = 12;
+arr[1] = 13;
+*//*arr[2] = 14;*//*
+arr[3] = 15;
+arr[4] = 16;
+
+Console.WriteLine(arr[2]);
+
+// using traditional for loop
+for (int i = 0; i < arr.Length; i++)
+{
+    Console.WriteLine($"arr[{i}] ---->> {arr[i]}");
+}
+
+// using for each
+foreach (int i in arr)
+{
+    Console.WriteLine(i);
+}
+
+Console.WriteLine("------------------------");
+//second Syntax
+
+string[] name = { "Suraj", "Sudarshan", "Yogesh", "Aadarsh" };
+
+foreach(string s in name)
+{
+    Console.WriteLine(s);
+}
+Console.WriteLine("------------------------");
+for (int i = 0; i < name.Length; i++)
+{
+    Console.WriteLine(name[i]);
+}
+
+Console.WriteLine("------------------------");
+
+double[] numbers = new double[7] {2.3,56.43,56.12,23.67,89.34,98,12.65};
+
+foreach (double n in numbers)
+{
+    Console.WriteLine(n);
+}
+
+Console.WriteLine("------------------------");
+for (int i = 0; i < numbers.Length; i++)
+{
+    Console.WriteLine(numbers[i]);
+}
+*/
+
+// Array of objects
+
+/*
+Products[] prds;
+Console.WriteLine("Enter how many products you have to add : ---->> ");
+int counts = Convert.ToInt32(Console.ReadLine());
+prds=new Products[counts];
+
+
+for (int i = 0; i < prds.Length; i++)
+{
+    Products product = new Products();
+    Console.WriteLine($"Enter Id of {i+1} Product : ");
+    product.prdId = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine($"Enter Name of {i + 1} Product : ");
+    product.productName =Console.ReadLine();
+    Console.WriteLine($"Enter Price of {i + 1} Product : ");
+    product.price = Convert.ToDouble(Console.ReadLine());
+    prds[i]= product;
+}
+
+//for Display 
+
+foreach(Products pr in prds)
+{
+    Console.WriteLine(pr);
+}
+*/
+
+//Methods
+/*
+int[] arr1 = new int[] { 80, 45, 12, 78, 1 };
+
+//Print as it is 
+Console.WriteLine("Array ------>>");
+foreach (int i in arr1)
+{
+    Console.WriteLine(i);
+}
+
+//sorting
+Console.WriteLine("Sorted ------>>");
+Array.Sort(arr1);
+
+foreach (int i in arr1)
+{
+    Console.WriteLine(i);
+}
+
+//Reverse
+Console.WriteLine("Reverse ------>>");
+Array.Reverse(arr1);
+foreach (int i in arr1)
+{
+    Console.WriteLine(i);
+}
+
+//copy
+int[] arr2 = new int[3];
+Array.Copy(arr1,2,arr2,0,3);
+Console.WriteLine("Copy ------>>");
+foreach (int i in arr2)
+{
+    Console.WriteLine(i);
+}
+
+//Clear
+Array.Clear(arr1);
+Console.WriteLine("After clear ----->>");
+foreach (int i in arr1)
+{
+    Console.WriteLine(i);
+}
+*/
+
+//All methods For String type array
+/*
+string[] str = new string[] { "suraj", "yogesh", "sudarshan", "aadarsh", "ravi" };
+
+//Print as it is 
+Console.WriteLine("Array ------>>");
+foreach (string s in str)
+{
+    Console.WriteLine(s);
+}
+
+
+//sorting
+Console.WriteLine("Sorted ------>>");
+Array.Sort(str);
+
+foreach (string s in str)
+{
+    Console.WriteLine(s);
+}
+
+//Reverse
+Console.WriteLine("Reverse ------>>");
+Array.Reverse(str);
+foreach (string s in str)
+{
+    Console.WriteLine(s);
+}
+
+//copy
+string[] str2 = new string[3];
+Array.Copy(str, 2, str2, 0, 3);
+Console.WriteLine("Copy ------>>");
+foreach (string s in str2)
+{
+    Console.WriteLine(s);
+}
+
+//Clear
+Array.Clear(str,2,2);
+Console.WriteLine("After clear ----->>");
+foreach (string s in str)
+{
+    Console.WriteLine(s);
+}
+*/
+
+// 2D Array
+
+// Addition of 3*3 matrix by accept data from user
+
+int[,] mat1 = new int[3, 3];
+
+int[,] mat2 = new int[3, 3];
+
+for (int i = 0; i <mat1.GetLength(0); i++)
+{
+    for (int j = 0; j < mat1.GetLength(1); j++)
+    {
+        Console.WriteLine($"Enter a element for position [{i},{j}] : ");
+        int num = Convert.ToInt32(Console.ReadLine());
+        mat1[i, j] = num;
+    }
+}
+
+for (int i = 0; i < mat2.GetLength(0); i++)
+{
+    for (int j = 0; j < mat2.GetLength(1); j++)
+    {
+        Console.WriteLine($"Enter a element for position [{i},{j}] : ");
+        int num = Convert.ToInt32(Console.ReadLine());
+        mat2[i, j] = num;
+    }
+}
+
+Console.WriteLine("Print first matrix ---->> ");
+
+foreach (int i in mat1)
+{
+    Console.Write(i+" , ");
+}
+
+Console.WriteLine("\nPrint second matrix ---->> ");
+
+foreach (int i in mat2)
+{
+    Console.Write(i+" , ");
+}
+
+//Addition
+
+Console.WriteLine("\nAddition of 2 matrices is ------>> ");
+
+int[,] addition = new int[3, 3];
+
+for (int i = 0; i < addition.GetLength(0); i++)
+{
+    for (int j = 0; j < addition.GetLength(1); j++)
+    {
+        addition[i, j] = mat1[i,j] + mat2[i,j];
+        Console.Write(addition[i,j]+" , ");
+    }
+}
 
