@@ -20,6 +20,12 @@ namespace Assesments
 
         public double price { get; set; }
 
+       /* public Products(int prdId, string prdName, double price)
+        {
+            this.prdId = prdId;
+            this.productName = prdName;
+            this.price = price;
+        }*/
         public override string ToString()
         {
             return $"Product Id : {prdId}, Product Name : {productName}, Price : {price}";

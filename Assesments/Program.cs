@@ -16,6 +16,7 @@ Console.WriteLine(d);
 Console.WriteLine(f);*/
 
 using Assesments;
+using System.Collections;
 
 // Employee Class With Methods
 /*
@@ -446,6 +447,7 @@ foreach (string s in str)
 
 // Addition of 3*3 matrix by accept data from user
 
+/*
 int[,] mat1 = new int[3, 3];
 
 int[,] mat2 = new int[3, 3];
@@ -499,3 +501,131 @@ for (int i = 0; i < addition.GetLength(0); i++)
     }
 }
 
+*/
+
+// String Demo
+
+/*
+string testStr = "Hello, World!";
+StringDemo sm = new StringDemo(testStr);
+
+Console.WriteLine("Is string empty or null: " + sm.IsEmptyOrNull());
+Console.WriteLine("Concatenated string: " + sm.Concat(" Welcome!"));
+Console.WriteLine("Character at index 7: " + sm.CharAt(7));
+Console.WriteLine("String to char array: " + string.Join(",", sm.ToCharArray()));
+Console.WriteLine("String to upper case: " + sm.ToUpper());
+Console.WriteLine("String to lower case: " + sm.ToLower());
+Console.WriteLine("Index of 'o': " + sm.IndexOf('o'));
+Console.WriteLine("Last index of 'o': " + sm.LastIndexOf('o'));
+Console.WriteLine("Substring from index 7 to 12: " + sm.Substring(7, 5));
+Console.WriteLine("Contains 'World': " + sm.Contains("World"));
+Console.WriteLine("Split by ',': " + string.Join(",", sm.Split(',')));
+Console.WriteLine("Trimmed string: " + sm.Trim());
+Console.WriteLine($"address of str {testStr.GetHashCode()}");
+*/
+
+// Custom Generic Collection
+/*
+CustomGeneric<int> list = new CustomGeneric<int>();
+list.Add(225);
+list.Add(345);
+list.Add(73);
+list.Add(21);
+list.Add(11);
+list.Add(99);
+list.Add(12);
+list.Add(90);
+list.Add(11);
+list.Add(90);
+list.Add(12);
+list.Add(90);
+list.Add(11);
+
+
+Array l=list.Print();
+foreach(var item in l)
+{
+    Console.WriteLine(item);
+}
+
+Console.WriteLine($"Total Number of elements in list are : {list.Count()}");
+*/
+
+// IEnumerable interface concept with custom class
+/*
+Team ind = new Team();
+
+foreach(Player p in ind)
+{
+    Console.WriteLine(p);
+}
+
+Player virat = new Player("Virat",3000);
+Player rohit = new Player("Rohit",5600);
+Console.WriteLine(virat);
+Console.WriteLine(rohit);
+Console.WriteLine();
+int result = CompareTo(virat, rohit);
+
+if (result == 1)
+{
+    Console.WriteLine("Virat has more runs than rohit");
+}
+else if (result == -1)
+{
+    Console.WriteLine("virat has less runs than rohit");
+}
+else
+{
+    Console.WriteLine("both have equal runs");
+}
+
+*/
+
+//IComaparable interface
+/*
+EmployeeForComaparable emp = new EmployeeForComaparable(12, "Sudarshan", 45000);
+EmployeeForComaparable emp1 = new EmployeeForComaparable(13, "Suraj", 55000);
+
+Console.WriteLine(emp);
+Console.WriteLine(emp1);
+Console.WriteLine();
+int result = emp.CompareTo(emp1);
+if(result == 1)
+{
+    Console.WriteLine("Sudarshan has more salary than Suraj ");
+}
+else if(result == -1)
+{
+    Console.WriteLine("Suraj has more salary than Sudarshan ");
+}
+else
+{
+    Console.WriteLine("Both have same salary");
+}
+*/
+
+// Comparer interface 
+/*
+Player virat = new Player("Virat",3000);
+Player rohit = new Player("Rohit",5600);
+Console.WriteLine(virat);
+Console.WriteLine(rohit);
+Console.WriteLine();
+PlayerComapare obj = new PlayerComapare();
+
+int result = obj.Compare(virat, rohit);
+
+if (result == 1)
+{
+    Console.WriteLine("Virat has more runs than rohit");
+}
+else if (result == -1)
+{
+    Console.WriteLine("virat has less runs than rohit");
+}
+else
+{
+    Console.WriteLine("both have equal runs");
+}
+*/
