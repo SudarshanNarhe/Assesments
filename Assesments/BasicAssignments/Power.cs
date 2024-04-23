@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 //⦁	WAP to accept base and index from user and calculates power
 
-namespace Assesments
+namespace Assesments.BasicAssignments
 {
     public class Power
     {
         public static int CalculatePower(int bas, int index)
         {
             int power = 1;
-            for(int i =1;i<=index; i++)
+            for (int i = 1; i <= index; i++)
             {
                 power = power * bas;
             }
@@ -23,7 +23,7 @@ namespace Assesments
         static void Main(string[] args)
         {
             Console.WriteLine("Enter a base : ");
-            int bas  = Convert.ToInt32(Console.ReadLine());
+            int bas = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter a index : ");
             int index = Convert.ToInt32(Console.ReadLine());
 

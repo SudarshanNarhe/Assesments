@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 
 //⦁	Write a Java program to print all alphabets from a to z. - using  for loop
-namespace Assesments
+namespace Assesments.BasicAssignments
 {
     internal class PrintAplabhets
     {
         public static void printsmallAlphabets()
         {
-            for(char ch = 'a'; ch <='z'; ch++)
-            {   
-              
+            for (char ch = 'a'; ch <= 'z'; ch++)
+            {
+
                 Console.WriteLine(ch);
             }
         }

@@ -6,27 +6,27 @@ using System.Threading.Tasks;
 
 // Prime Numbers logic
 //⦁	Find all prime number between 400 to 300;
-namespace Assesments
+namespace Assesments.BasicAssignments
 {
     internal class PrimeNumber
     {
-        public static Boolean checkPrimeNumber(int num)
+        public static bool checkPrimeNumber(int num)
         {
-            Boolean isprime=true;
-            if (num == 0 || num ==1)
+            bool isprime = true;
+            if (num == 0 || num == 1)
             {
                 isprime = false;
             }
             else
             {
-                for(int i=2;i<=num/2;i++)
+                for (int i = 2; i <= num / 2; i++)
                 {
-                    if(num%i == 0)
+                    if (num % i == 0)
                     {
                         isprime = false;
                         break;
                     }
-                   
+
                 }
             }
             /*if (isprime)
@@ -51,14 +51,14 @@ namespace Assesments
             */
 
             Console.WriteLine("The prime numbers between 300 to 400 is ----->> ");
-            for (int i=300;i<=400;i++)
+            for (int i = 300; i <= 400; i++)
             {
                 bool prime = checkPrimeNumber(i);
                 if (prime)
                 {
                     Console.WriteLine(i);
                 }
-                
+
             }
         }
     }

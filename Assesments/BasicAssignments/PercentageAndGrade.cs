@@ -5,29 +5,32 @@ using System.Text;
 using System.Threading.Tasks;
 
 //write a code to calculate the five subject percentage and as per the percentage display the grade
-namespace Assesments
+namespace Assesments.BasicAssignments
 {
     internal class PercentageAndGrade
     {
-        public static double calPercentage(int sub1,int sub2,int sub3, int sub4, int sub5)
+        public static double calPercentage(int sub1, int sub2, int sub3, int sub4, int sub5)
         {
             double percentage = (sub1 + sub2 + sub3 + sub4 + sub5) / 5;
             return percentage;
         }
 
         public static void showGrade(double per)
-        {   
+        {
 
             if (per > 80)
             {
                 Console.WriteLine("Grade : A ");
-            }else if (per > 60)
+            }
+            else if (per > 60)
             {
                 Console.WriteLine("Grade : B ");
-            }else if (per > 50)
+            }
+            else if (per > 50)
             {
                 Console.WriteLine("Grade : C ");
-            }else if (per > 35)
+            }
+            else if (per > 35)
             {
                 Console.WriteLine("Grade : D ");
             }
@@ -50,7 +53,7 @@ namespace Assesments
             int sub5 = Convert.ToInt32(Console.ReadLine());
 
             double per = calPercentage(sub1, sub2, sub3, sub4, sub5);
-            Console.WriteLine("Percentage is : "+per);
+            Console.WriteLine("Percentage is : " + per);
             showGrade(per);
         }
     }

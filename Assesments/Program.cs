@@ -629,3 +629,31 @@ else
     Console.WriteLine("both have equal runs");
 }
 */
+
+// Default and Optional demo
+/*
+Users u1 = new Users();
+u1.Accept(12, "Sudarshan");
+Console.WriteLine(u1);
+
+Users u2 = new Users();
+u2.Accept(13,"Suraj",false);
+Console.WriteLine(u2);
+
+Users u3 = new Users();
+u3.Accept(14, "Yogesh", true, "UK");
+Console.WriteLine(u3);
+*/
+
+// named arguments demo
+/*
+User1 u1 = new User1("Amol", "Pune");
+Console.WriteLine(u1);
+
+User1 u2 = new User1(city: "Mumbai", name: "Akshay");
+Console.WriteLine(u2);
+
+User1 u3 = new User1(name: "Akshay", city: "Mumbai");
+Console.WriteLine(u3);
+
+*/

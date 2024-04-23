@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 ⦁	 WAP to print even numbers from 121 to 229 using do-while loop.
 */
 
-namespace Assesments
+namespace Assesments.BasicAssignments
 {
     internal class LoopPractice
     {
         public static void forloopDemo()
         {
-            for(int i=121; i<=229;i++)
+            for (int i = 121; i <= 229; i++)
             {
                 if (i % 2 == 0)
                 {
@@ -30,7 +30,7 @@ namespace Assesments
             int i = 121;
             while (i <= 229)
             {
-                if(i%2 == 0)
+                if (i % 2 == 0)
                 {
                     Console.WriteLine(i);
                 }
@@ -43,7 +43,7 @@ namespace Assesments
             int i = 121;
             do
             {
-                if ((i % 2) == 0)
+                if (i % 2 == 0)
                 { Console.WriteLine(i); }
             } while (i <= 229);
         }

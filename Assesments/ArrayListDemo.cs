@@ -9,7 +9,7 @@ namespace Assesments
 {
     public class ArrayListDemo
     {
-        static void Main(string[] args)
+       static void Main(string[] args)
         {
             ArrayList arr = new ArrayList();
             arr.Add(12);

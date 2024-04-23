@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 //⦁	Print Series 2 -4 6 -8………n terms
 
-namespace Assesments
+namespace Assesments.BasicAssignments
 {
     internal class PrintSeries
     {
         public static void printSeries(int num)
-        {   
+        {
             int count = 0;
-            for(int i = 1; i <= num; i++)
+            for (int i = 1; i <= num; i++)
             {
-                if(i%2 == 0)
+                if (i % 2 == 0)
                 {
                     count++;
-                    if(count%2 == 0)
+                    if (count % 2 == 0)
                     {
                         int num1 = -i;
-                        Console.Write(num1+" ");
+                        Console.Write(num1 + " ");
                     }
                     else
                     {
-                        Console.Write(i+" ");
+                        Console.Write(i + " ");
                     }
                 }
             }

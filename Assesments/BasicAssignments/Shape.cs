@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assesments
+namespace Assesments.BasicAssignments
 {
     public abstract class Shape
     {
@@ -18,7 +18,7 @@ namespace Assesments
 
     public class Circle : Shape
     {
-        private const double pie=3.14;
+        private const double pie = 3.14;
         private double radius, area;
 
         public Circle(double radius)
@@ -27,7 +27,7 @@ namespace Assesments
         }
         public override void CalculateArea()
         {
-            area = pie*radius*radius;
+            area = pie * radius * radius;
         }
 
         public string Display()
@@ -42,12 +42,12 @@ namespace Assesments
 
         public Rectangle(double length, double width)
         {
-            this.lenght = length;
+            lenght = length;
             this.width = width;
         }
         public override void CalculateArea()
         {
-            area = lenght*width;
+            area = lenght * width;
         }
 
         public string Display()
