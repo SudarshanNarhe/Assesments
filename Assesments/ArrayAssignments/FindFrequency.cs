@@ -11,19 +11,48 @@ namespace Assesments.ArrayAssignments
 {
     public class FindFrequency
     {
-        public int FindFrequncy(int[] arr, int num)
+        public void FindFrequencyFromArray(int[] num)
         {
-            int frequency = 0;
 
-            for(int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < num.Length; i++)
             {
-                if (arr[i] == num)
+                int count = 0;
+
+                bool isPrint = false;
+
+                for (int j = 0; j < num.Length; j++)
                 {
-                    frequency++;
+                    if (num[i] == num[j])
+                    {
+                        count++;
+                        isPrint = true;
+
+                    }
                 }
+
+                if (isPrint)
+                {
+                    bool notPrint = true;
+
+                    for (int k = i - 1; k >= 0; k--)
+                    {
+                        if (num[i] == num[k])
+                        {
+                            notPrint = false;
+                            break;
+                        }
+                    }
+                    if (notPrint)
+                    {
+                        Console.WriteLine($"{num[i]} repeates ---->> {count} times");
+                    }
+
+                }
+
+
             }
 
-            return frequency;
         }
+
     }
 }

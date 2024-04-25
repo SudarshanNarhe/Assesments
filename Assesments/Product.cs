@@ -40,5 +40,10 @@ namespace Assesments
         {
             Code = 34;
         }
+
+        public override string ToString()
+        {
+            return $"Code : {Code}, Name : {Name}, Price : {Price}";
+        }
     }
 }

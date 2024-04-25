@@ -657,3 +657,110 @@ User1 u3 = new User1(name: "Akshay", city: "Mumbai");
 Console.WriteLine(u3);
 
 */
+
+//CAll By Reference Demo
+/*
+// This is call by Value
+int a = 20, b = 10;
+Console.WriteLine($"a: {a}, b : {b}");
+CallByRefDemo rd = new CallByRefDemo();
+
+Console.WriteLine("Before using Ref ");
+rd.Swap( a, b );
+Console.WriteLine($"a: {a}, b : {b}");
+// Call By ref
+Console.WriteLine("After using Ref ");
+rd.Swap1(ref a, ref b);
+Console.WriteLine($"a: {a}, b : {b}");
+*/
+
+// Out Keyword Demo
+/*
+int a=10, b=2, sum, sub, mul;
+double  div;
+OutDemo ot = new OutDemo();
+string result =ot.Calculation(a, b, out sum,out sub, out mul, out div);
+
+Console.WriteLine($"Sum is : {sum}");
+Console.WriteLine($"Sub is : {sub}");
+Console.WriteLine($"Mul is : {mul}");
+Console.WriteLine($"Div is : {div}");
+
+Console.WriteLine($"Result : {result}");
+*/
+
+// Params Demo
+/*
+ParamsDemo pd = new ParamsDemo();
+pd.Display("Sudarshan", "Suraj", "Yogesh", "Aadarsh", "Ganesh");
+*/
+
+// Generic Method Demo
+/*
+GenericMethodDemo obj = new GenericMethodDemo();
+
+obj.Swap<int>(3, 7);
+
+string name1 = "User1", name2 = "User2";
+obj.Swap<string>(name1, name2);
+
+obj.Swap<Product>(new Product { Code = 1, Name = "laptop", Price = 78800 }, new Product { Code = 2, Name = "mobile", Price = 9999 });
+*/
+
+
+//Custom Exception Demo
+/*
+Person p1 = new Person();
+try
+{
+    p1.AcceptAge(19);
+    p1.AcceptName(null);
+    Console.WriteLine(p1.Name);
+}
+catch(CustomException nm)
+{
+    Console.WriteLine(nm.Message);
+}
+*/
+
+//Delegate Demo
+/*
+Calci c1 = new Calci();
+
+// create object of delegate & pass the method name to hold the address
+
+MyDelegate mydelegate = new MyDelegate(c1.Add); //Singlecast
+mydelegate += new MyDelegate(c1.Sub); //Multicast to add 
+mydelegate += new MyDelegate(c1.Mul);
+mydelegate += new MyDelegate(c1.Div);
+
+//mydelegate -= new MyDelegate(c1.Div); // for remove
+
+// to get the invocation list to retrieve the methods from delegate
+Delegate[] list = mydelegate.GetInvocationList();
+
+foreach (Delegate item in list)
+{
+    Console.WriteLine(item.Method);
+    Console.WriteLine(item.DynamicInvoke(12, 3));
+}
+
+// this is in case of single cast delete
+//int result = mydelegate.Invoke(10, 20);
+//Console.WriteLine(result);
+*/
+
+//Event and Delegate Demo
+/*
+Bank b1 = new Bank();
+
+MyMessage message = new MyMessage();
+
+//bind the delegate and event together
+b1.LowBalance += new Bankdelegate(message.BalanceMsg);
+
+b1.Withdraw(1000);
+Console.WriteLine(b1);
+b1.Withdraw(7000);
+Console.WriteLine(b1);
+*/

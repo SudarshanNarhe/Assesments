@@ -95,11 +95,85 @@ namespace Assesments.ArrayAssignments
                        int number= sm.PrintSecondSmallest(nums);
                         Console.WriteLine($"Second Smallest number is : {number}");
             */
+
             //9.WAP to count frequency of each element in an array.
-            int[] arr = { 2, 3, 4, 5, 2, 3, 1, 5, 6, 7, 8, 6, 7, 5 };
+            /*
+                        int[] arr = { 2, 3, 4, 5, 2, 3, 1, 5, 6, 7, 8, 6, 7, 5,34 };
+                        PrintArray<int>.Print(arr);
+                        FindFrequency fq = new FindFrequency();
+                        fq.FindFrequencyFromArray(arr);
+            */
 
+            //10. WAP to merge 2 arrays to 3rd array. 3rd array should not have elements of same value.
+            /*
+             int[] arr1 = { 1, 2, 3, 4, 5, 6, 2, 3 };
+             int[] arr2 = { 1, 2, 3, 4, 5, 6, 2, 3 };
+             Console.WriteLine("Original : ");
+             PrintArray<int>.Print(arr1);
+             PrintArray<int>.Print(arr2);
 
+             MergeArray mg = new MergeArray();
+             Console.WriteLine("Merge Array of unique elements is : ");
+             mg.MergeTwoArray(arr1 , arr2);
+ */
+            //11.WAP sort array elements in ascending order
+            /*
+                        int[] array = { 13, 22, 5, 2, 6, 74, 54, 31 };
+                        Console.WriteLine("Original : ");
+                        PrintArray<int>.Print(array);
+                        SortArray sr = new SortArray();
+                        Console.WriteLine("Ascending order : ");
+                        sr.SortArrayAsc(array);
+                        Console.WriteLine("Descending order : ");
+                        sr.SortArrayDesc(array);
+                       */
 
+            //12.WAP to reverse the array itself, don’t print array in reverse – I want current array reverse.
+            //Means e.g. arr[] = [3, 90, 45, 29, 37, 78] so your same array must be [78, 37, 29, 45, 90, 3]
+            //without using temporary array.
+
+            /*
+                        int[] array = { 4, 3, 5, 6, 8, 9, 12, 65 };
+                        Console.WriteLine("Original : ");
+                        PrintArray<int>.Print(array);
+                        ReverseArray ra = new ReverseArray();
+                        ra.Reverse_Array(array);
+            */
+
+            //13.Write a  program to test the equality of two arrays.
+            //Means e.g arr1[] = [12, 22, 32, 42, 52, 62] and arr2[] = [52, 22, 62, 12, 42, 22]
+            //Here both arrays are equal.
+            /*
+                        int[] arr1 = { 12, 22, 32, 42, 52, 62 };
+                        int[] arr2 = { 52, 22, 62, 12, 42, 32 };
+
+                        PrintArray<int>.Print(arr1);
+                        PrintArray<int>.Print(arr2);
+
+                        EqualArray eq = new EqualArray();
+                        eq.CheckEqualArray(arr1, arr2);
+            */
+
+            //WAP to replace all negative value with its immediate left elements square.
+            //Means arr[] = [12, 3,-19, 29, 5, -61, 44, 7, -9]
+            //Output array will be [12, 3, 9, 29, 5, 25, 44, 7, 49].
+            /*
+                        int[] arr = { 12, 3, -19, 29, 5, -61, 44, 7, -9 };
+                        Console.WriteLine("Original : ");
+                        PrintArray<int>.Print(arr);
+                        ReplaceNegative nr = new ReplaceNegative();
+                        nr.ReplaceNegativeValue(arr);
+            */
+
+            //WAP to arrange the elements of an given array of integers where all negative integers
+            //appear before all the positive integers.
+/*
+            int[] arr = { 12, 3, -19, 29, 5, -61, 44, 7, -9 };
+            Console.WriteLine("Original : ");
+            PrintArray<int>.Print(arr);
+            SortNegative sort = new SortNegative();
+            sort.SortNegativeArray(arr);
+*/              
 
         }
     }
