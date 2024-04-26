@@ -62,12 +62,12 @@ namespace Assesments.StringAssignments
             */
 
             //8.Write a C# program to toggle case of each character of a string.
-            /*
+            
                         ToggleCase tc = new ToggleCase();
                         string strr = "sudSJWKSjXna";
                         Console.WriteLine($"Original : {strr}");
                         tc.ChangeToggleCase(strr);
-            */
+            
 
             //9.Write a C# program to count total number of vowels and consonants in a string.
             /* 
@@ -134,7 +134,7 @@ namespace Assesments.StringAssignments
             */
 
             //21.Create an array of 10 names sort in descending order
-                
+            /*    
             SortString ss = new SortString();
 
             string[] names = { "Sudarshan", "Suraj", "Aadarsh", "Yogesh", "Amol", "Laxman", "Raju", "Pravin", "Nitin", "Balu" };
@@ -146,7 +146,7 @@ namespace Assesments.StringAssignments
             }
             Console.WriteLine();
             ss.SortArrayOfNamesDesc(names);
-
+*/
         }
     }
 }

@@ -31,5 +31,10 @@ namespace Assesments.PatternAssignments
                 Console.WriteLine();
             }
         }
+
+        public void FlipTriangleStar(int rows)
+        { 
+
+        }
     }
 }

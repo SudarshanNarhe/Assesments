@@ -33,37 +33,46 @@ namespace Assesments.CrudOperations
     public class EmployeeCrud
     {
         private List<Employee2> employees;
-        EmployeeCrud crud;
+
+        public EmployeeCrud()
+        {
+            employees = new List<Employee2>();
+        }
         public void AddEmployee(Employee2 employee)
         {
-            employees.Add(employee);
+            if (employee != null)
+            {
+                employees.Add(employee);
+                Console.WriteLine("\nEmployee Added Successfully...\n");
+            }
+           
         }
 
         public void UpdateEmployee(int id, Employee2 employee)
         {
 
-            int index = crud.FindEmployeeById(id);
+            int index = FindEmployeeById(id);
             if (index != -1)
             {
                 employees[index] = employee;
-                Console.WriteLine("Employee Updated Successfully...");
+                Console.WriteLine("\nEmployee Updated Successfully...\n");
             }
         }
 
         public void DeleteEmployee(int id)
         {
-            int index = crud.FindEmployeeById(id);
+            int index = FindEmployeeById(id);
 
             if (index != -1)
             {
                 employees.RemoveAt(index);
-                Console.WriteLine("Employee Updated Successfully...");
+                Console.WriteLine("\nEmployee Deleted Successfully...\n");
             }
         }
 
         public int FindEmployeeById(int id)
         {
-            int index = 0;
+           
 
             for (int i = 0; i < employees.Count; i++)
             {
@@ -72,24 +81,52 @@ namespace Assesments.CrudOperations
                 {
                     Employee2 employee = employees[i];
                     Console.WriteLine(employee);
-                    i = index;
+                    return i;
 
                 }
-                else
-                {
-                    Console.WriteLine("NO Employee found with given User");
-                    index = -1;
-                }
+                
             }
-            return index;
+            Console.WriteLine("\nNO Employee found with given Employee Id\n");
+            return -1;
+        }
+
+        public void FindEmployeeByName(string name)
+        {
+            Console.WriteLine($"\nDisplay Employees By Name {name}: \n");
+            int count = 0;
+            foreach (Employee2 employee in employees)
+            {
+                if(employee.name.ToLower() == name.ToLower())
+                {
+                    count++;
+                    Console.WriteLine(employee);
+                }
+               
+            }
+            if(count == 0)
+            {
+                Console.WriteLine($"No Employees Found with name :  {name} \n");
+            }
+            Console.WriteLine();
         }
 
         public void DisplayAllEmployee()
         {
-            foreach (Employee2 employee in employees)
+            if (employees.Any())
             {
-                Console.WriteLine(employee);
+                Console.WriteLine("\nDisplay all Employees : \n");
+
+                foreach (Employee2 employee in employees)
+                {
+                    Console.WriteLine(employee);
+                }
+                Console.WriteLine();
             }
+            else
+            {
+                Console.WriteLine("\nThe List is Empty...!!!\n");
+            }
+           
         }
     }
 
@@ -102,9 +139,10 @@ namespace Assesments.CrudOperations
 
             do
             {
-                Console.WriteLine("1.Add Employee\n2.Update Employee\n3.Delete Employee\n4.Display Employee By Id\n5.Display All Employee\n6.Exists...!!");
+                
+                Console.WriteLine("1.Add Employee\n2.Update Employee\n3.Delete Employee\n4.Display Employee By Id\n5.Display Employee By Name\n6.Display All Employee\n7.Exists...!!");
                 choice = Convert.ToInt32(Console.ReadLine());
-
+                Console.WriteLine();
                 switch (choice)
                 {
                     case 1:
@@ -114,17 +152,26 @@ namespace Assesments.CrudOperations
                         string name = Console.ReadLine();
                         Console.WriteLine("Enter a Salary of Employee : ");
                         double salary = Convert.ToDouble(Console.ReadLine());
-                        crud.AddEmployee(new Employee2(id, name, salary));
+                        Employee2 emp = new Employee2();
+                        emp.id = id;
+                        emp.name = name;
+                        emp.salary = salary;
+                        crud.AddEmployee(emp);
                         break;
 
                     case 2:
                         Console.WriteLine("Enter a ID of Employee : ");
                         int updateid = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Enter a Name of Employee : ");
-                        string updatedname = Console.ReadLine();
-                        Console.WriteLine("Enter a Salary of Employee : ");
-                        double updatedsalary = Convert.ToDouble(Console.ReadLine());
-                        crud.UpdateEmployee(updateid, new Employee2(updateid, updatedname, updatedsalary));
+                        int res = crud.FindEmployeeById(updateid);
+                        if (res != -1)
+                        {
+                            Console.WriteLine("Enter a Name of Employee : ");
+                            string updatedname = Console.ReadLine();
+                            Console.WriteLine("Enter a Salary of Employee : ");
+                            double updatedsalary = Convert.ToDouble(Console.ReadLine());
+                            crud.UpdateEmployee(updateid, new Employee2(updateid, updatedname, updatedsalary));
+
+                        }
                         break;
 
                     case 3:
@@ -140,21 +187,26 @@ namespace Assesments.CrudOperations
                         break;
 
                     case 5:
-                        Console.WriteLine("Display all Employees : ");
-                        crud.DisplayAllEmployee();
+                        Console.WriteLine("Enter a Name of Employee : ");
+                        string displayname = Console.ReadLine();
+                        crud.FindEmployeeByName(displayname);
                         break;
                     case 6:
+                        crud.DisplayAllEmployee();
+                        break;
+                    case 7:
                         Console.WriteLine("Existing....!!");
                         break;
 
                     default:
-                        Console.WriteLine("Invalid choice. Please enter a number between 1 to 6 ");
+                        Console.WriteLine("\nInvalid choice. Please enter a number between 1 to 6 \n");
                         break;
 
 
                 }
+                
 
-            } while (choice != 6);
+            } while (choice != 7);
         }
     }
 }
