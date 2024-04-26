@@ -75,13 +75,77 @@ namespace Assesments.StringAssignments
               vc.CountVowelsAndConsonant("C# is a Object Oriented Programming langauage");
 */
             //10.Write a C# program to find reverse of a string.
-            ReverseString rs = new ReverseString();
-            string str = "sudarshan";
-            Console.WriteLine($"Original string is  : {str}");
-            rs.ReverseGivenString(str);
+             ReverseString rs = new ReverseString();
 
+            /* string str = "sudarshan";
+             Console.WriteLine($"Original string is  : {str}");
+             rs.ReverseGivenString(str);
+ */
+            //11.Write a C# program to reverse order of words in a given string.
+            /*
+             ReverseOrder rs = new ReverseOrder();
+             rs.ReverseOrderOfWords("C# is object oriented Programming Language");
+ */
+            //12.Write a C# program to find highest frequency character in a string.
+            /*
+                        FindFrequency fc = new FindFrequency();
+                        fc.FindHighestFrequency("sudarshannnssss");
+            */
 
+            //13.Write a C# program to find total number of alphabets, digits or special character in a string.
+            /*    
+            FindNumbersAndDigits fd = new FindNumbersAndDigits();
+            fd.FindTotalNumbersDigitsAndAplabhets("suda123@123");
+*/
+            //14.Write a C# program to find the duplicate words and their number of occurrences in a string
+            /*  FindDuplicateWords fw = new FindDuplicateWords();
+              fw.FindDuplicateWordsAndCount("Hello I love dot net and also I love java and python");
+  */
+            //15.Write a C# program to check whether two strings are anagram or not?
+            /* Anagram ng = new Anagram();
+             ng.CheckAnagram("silent", "listen");
+ */
+            //16.Write a C# program to reverse a given string with preserving the position of spaces
 
+            //  rs.ReverseByPreserveSpaces("Hello World");
+
+            //17.WAP to find longest word in the given sentence
+            /*
+                           LongestWord lw = new LongestWord();
+                           string str = "Hello World I am learning dot net";
+                           Console.WriteLine(str);
+                           lw.FindLongestWord(str);
+            */
+            //18.How do you swap two string variables without using third or temp variable in C#
+            /*
+             SwapString ss = new SwapString();
+             ss.SwapStringWithoutUsingTemp("Sudarshan", "Suraj");
+ */
+            //19.Accept email_id from user and check valid or not(should contain @,.)
+            /*
+                        EmailValidate ev = new EmailValidate();
+                        ev.CheckEmailValidation("suda@mail.com");
+            */
+
+            //20.Accept sentence replace each vowel by next consecutive character
+            /*
+                        ReplaceVowel rv = new ReplaceVowel();
+                        rv.ReplaceVowelByNextCosn("Asur");
+            */
+
+            //21.Create an array of 10 names sort in descending order
+                
+            SortString ss = new SortString();
+
+            string[] names = { "Sudarshan", "Suraj", "Aadarsh", "Yogesh", "Amol", "Laxman", "Raju", "Pravin", "Nitin", "Balu" };
+
+            Console.WriteLine("Names : ");
+            foreach (string name in names)
+            {
+                Console.Write(name+", ");
+            }
+            Console.WriteLine();
+            ss.SortArrayOfNamesDesc(names);
 
         }
     }

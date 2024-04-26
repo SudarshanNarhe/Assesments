@@ -154,7 +154,7 @@ namespace Assesments.ArrayAssignments
                         eq.CheckEqualArray(arr1, arr2);
             */
 
-            //WAP to replace all negative value with its immediate left elements square.
+            //14.WAP to replace all negative value with its immediate left elements square.
             //Means arr[] = [12, 3,-19, 29, 5, -61, 44, 7, -9]
             //Output array will be [12, 3, 9, 29, 5, 25, 44, 7, 49].
             /*
@@ -165,15 +165,15 @@ namespace Assesments.ArrayAssignments
                         nr.ReplaceNegativeValue(arr);
             */
 
-            //WAP to arrange the elements of an given array of integers where all negative integers
+            //15.WAP to arrange the elements of an given array of integers where all negative integers
             //appear before all the positive integers.
-/*
+
             int[] arr = { 12, 3, -19, 29, 5, -61, 44, 7, -9 };
             Console.WriteLine("Original : ");
             PrintArray<int>.Print(arr);
             SortNegative sort = new SortNegative();
             sort.SortNegativeArray(arr);
-*/              
+             
 
         }
     }
